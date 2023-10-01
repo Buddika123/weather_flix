@@ -131,7 +131,7 @@ align-items: self-end;
 .weather-data .current-weather {
   color: rgb(249, 249, 252);
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border-radius: 30px;
   padding: 20px 70px 20px 20px;
   display: flex;
