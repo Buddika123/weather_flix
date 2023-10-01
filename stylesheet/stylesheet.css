@@ -112,6 +112,7 @@ nav {
 .test {
 background-color: red;
 flex-direction: row;
+display: flex;
 }
 
 /* Weather data styles */
