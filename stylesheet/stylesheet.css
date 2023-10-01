@@ -111,8 +111,11 @@ nav {
 }
 .test {
 background-color: red;
-flex-direction: row;
-display: flex;
+align-items: self-end;
+}
+
+.title {
+  justify-content: center;
 }
 
 /* Weather data styles */
@@ -126,18 +129,39 @@ display: flex;
   color: white;
 }
 .weather-data .current-weather {
-  color: blue;
-  background: #d0d0ee;
-  border-radius: 5px;
+  color: rgb(249, 249, 252);
+  /* background: #d0d0ee; */
+  border-radius: 30px;
   padding: 20px 70px 20px 20px;
   display: flex;
   justify-content: space-evenly;
+  border-style: solid;
+  border-width: 3px;
+  border-color: whitesmoke;
+  box-shadow: 0px 0px 10px rgba(247, 244, 244, 0.5);
+  /* opacity: 0.5; */
 }
 
-.weather-data .current-weather .current-weather-details {
+/* .weather-data .current-weather .current-weather-details {
   background-color: rgb(238, 229, 229);
+  
    
+} */
+
+.current-weather-details {
+  /* background-color: rgb(238, 229, 229); */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  padding: 20px;
+  gap: 10px; /* Spacing between child elements */
 }
+.current-weather-details h1,
+.current-weather-details p {
+  text-align: center;
+}
+
 
 .current-weather-details .icon {
   
