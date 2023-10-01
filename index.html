@@ -1,26 +1,121 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="utf-8">
-            <title>Weather flix</title>
-            <link rel="stylesheet" href="./stylesheet/stylesheet.css">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <script src="script.js" defer></script>
-    </head>
-        <body>
-            <nav><h1>WEATHER FLIX</h1>
-           </nav>
-           <div class="container">
-            <div class="weather-data">
-                <div class="current-weather">
-                  <div class="details">
-                    <h2>_______ ( ______ )</h2>
-                    <h6>Temperature: __°C</h6>
-                    <h6>Wind: __ M/S</h6>
-                    <h6>Humidity: __%</h6>
-                  </div>
-                 
-           </div>
-             
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather App Project JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="./stylesheet/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/app.js" defer></script>
+    <script>
+      window.onload = function() {
+          getWeather(); // Call getWeather when the page loads
+      };
+  </script>
+  </head>
+  <body>
+    <nav><h1>WEATHER FLIX</h1>
+      
+   </nav>
+   <div id="banner" class="container banner">
+    <h1></h1>
+   </div>
+   
+</div>
+
+    <div class="container">
+      <div class="weather-input">
+        <!-- <h3>Enter a City Name</h3> -->
+        <input id="location" class="city-input" type="text" placeholder="Search by city">
+        <button class="search-btn" onclick={getWeather()}>Search</button>
+        <!-- <div class="separator"></div>
+        <button class="location-btn">Use Current Location</button> -->
+      
+        <div class="map">
+         <img src="./assest/map1.jpg" alt="map">
+        </div>
+      </div>
+      <div class="weather-data">
+        <div class="date-place">
+            <h3>Colombo - </h3>
+           
+            <h3> Sep 30</h3>
+        </div>
+<!-- <div class="test">
+    <h1>title</h1>
+    <p>This is the p tag</p>
+</div>
+<div class="test">
+    <h1>yesy</h1>
+</div> -->
+    
+          <div id="weatherInfo" class="current-weather">
+            <div class="current-weather-details">
+                <h1 id="city">Current Wether in Colombo</h2>
+                <img  src="//cdn.weatherapi.com/weather/64x64/day/116.png" style="width: 30px" >
+            </div>
+            <div class="current-weather-details">
+                <h1>Teperature</h1>
+                <p>34</p>
+            </div>
+            <div class="current-weather-details">
+                <h1>Humumuduty</h1>
+                <p>56</p>
+            </div>
+           
+           
+          </div>
+          <div class="days-forecast">
+            <h2>7-Day Forecast</h2>
+            <ul class="weather-cards">
+              <li class="card">
+                <h3>SUN</h3>
+                <h6>Temp: 25C</h6>
+                <h6>Wind: 30 M/S</h6>
+                <h6>Humidity: 45%</h6>
+              </li>
+              <li class="card">
+                <h3>MON</h3>
+                <h6>Temp: 25C</h6>
+                <h6>Wind: 30 M/S</h6>
+                <h6>Humidity: 45%</h6>
+              </li>
+              <li class="card">
+                <h3>TUE</h3>
+                <h6>Temp: 25C</h6>
+                <h6>Wind: 30 M/S</h6>
+                <h6>Humidity: 45%</h6>
+              </li>
+              <li class="card">
+                <h3>WED</h3>
+                <h6>Temp: 25C</h6>
+                <h6>Wind: 30 M/S</h6>
+                <h6>Humidity: 45%</h6>
+              </li>
+              <li class="card">
+                <h3>THU</h3>
+                <h6>Temp: 25C</h6>
+                <h6>Wind: 30 M/S</h6>
+                <h6>Humidity: 45%</h6>
+              </li>
+              <li class="card">
+                  <h3>FRI</h3>
+                  <h6>Temp: 25C</h6>
+                  <h6>Wind: 30 M/S</h6>
+                  <h6>Humidity: 45%</h6>
+                </li>
+                <li class="card">
+                  <h3>SAT</h3>
+                  <h6>Temp: 25C</h6>
+                  <h6>Wind: 30 M/S</h6>
+                  <h6>Humidity: 45%</h6>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       
+       
+   
+    
+  </body>
 </html>
