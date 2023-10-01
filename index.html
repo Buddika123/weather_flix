@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/app.js" defer></script>
     <script>
-      window.onload = function() {
-          getWeather(); // Call getWeather when the page loads
-      };
-  </script>
+        window.onload = function() {
+            getWeather();// CalgetWeather when the page loads
+            forecastWeather(2)
+        };
+    </script>
   </head>
   <body>
+   
     <nav><h1>WEATHER FLIX</h1>
       
    </nav>
@@ -25,7 +27,7 @@
     <div class="container">
       <div class="weather-input">
         <!-- <h3>Enter a City Name</h3> -->
-        <input id="location" class="city-input" type="text" placeholder="Search by city">
+        <input id="cityname" class="city-input" type="text" placeholder="Search by city">
         <button class="search-btn" onclick={getWeather()}>Search</button>
         <!-- <div class="separator"></div>
         <button class="location-btn">Use Current Location</button> -->
@@ -64,16 +66,19 @@
            
            
           </div>
-          <div class="days-forecast">
+          <div id="days-forecast"  class="days-forecast">
             <h1>7-Day Forecast</h1>
-            <ul class="weather-cards">
-              <li class="card">
-                <h3>SUN</h3>
-                <h6>Temp: 25C</h6>
-                <h6>Wind: 30 M/S</h6>
-                <h6>Humidity: 45%</h6>
+            <!-- <div id="forecastContainer"></div> -->
+
+            <ul id="forecastList" class="weather-cards">
+              <li id="card" class="card">
+                <h3></h3>
+                <p></p>
+                <!-- <h6></h6>
+                <h6></h6> -->
+                <p></p>
               </li>
-              <li class="card">
+              <!-- <li class="card">
                 <h3>MON</h3>
                 <h6>Temp: 25C</h6>
                 <h6>Wind: 30 M/S</h6>
@@ -96,8 +101,8 @@
                 <h6>Temp: 25C</h6>
                 <h6>Wind: 30 M/S</h6>
                 <h6>Humidity: 45%</h6>
-              </li>
-              <li class="card">
+              </li> -->
+              <!-- <li class="card">
                   <h3>FRI</h3>
                   <h6>Temp: 25C</h6>
                   <h6>Wind: 30 M/S</h6>
@@ -108,7 +113,7 @@
                   <h6>Temp: 25C</h6>
                   <h6>Wind: 30 M/S</h6>
                   <h6>Humidity: 45%</h6>
-                </li>
+                </li> -->
             </ul>
           </div>
         </div>
