@@ -130,7 +130,8 @@ align-items: self-end;
 }
 .weather-data .current-weather {
   color: rgb(249, 249, 252);
-  /* background: #d0d0ee; */
+  margin-top: 20px;
+  margin-bottom: 40px;
   border-radius: 30px;
   padding: 20px 70px 20px 20px;
   display: flex;
@@ -160,6 +161,9 @@ align-items: self-end;
 .current-weather-details h1,
 .current-weather-details p {
   text-align: center;
+}
+.current-weather-details p {
+  font-size:3rem;
 }
 
 
@@ -195,8 +199,9 @@ align-items: self-end;
   text-transform: capitalize;
   
 }
-.days-forecast h2 {
-  margin: 20px 0;
+.days-forecast h1 {
+  text-align: center;
+  margin: 20px 10px;
   font-size: 1.5rem;
   color: white;
 }
@@ -222,6 +227,7 @@ align-items: self-end;
   border-width: 2px;
   border-color: white;
   box-shadow: 0px 0px 10px rgba(247, 244, 244, 0.5);
+  text-align: center;
 }
 .weather-cards .card h3 {
   font-size: 1.3rem;

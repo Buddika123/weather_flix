@@ -32,6 +32,7 @@ function getWeather() {
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
+                document.getElementById("weatherInfo").innerHTML = "Loding...";
                 throw new Error("Network response was not ok");
             }
             return response.json(); // Parse the JSON response
@@ -43,11 +44,14 @@ function getWeather() {
             const humidity = data.current.humidity;
 
             console.log(temperature)
-            console.log(data.location)
+            console.log(data)
             
             // Update the HTML to display the weather information
             // const weatherInfo = `
-              const city = `  <h2>Current Weather in ${data.location.name}</h2>`;
+              const city = `<h1> ${data.location.name}</h1>
+              <img src=\"${data.current.condition.icon}\" >`;
+              const image = `<img src="${data.current.condition.icon}" width=\"200px\" height=\"150px\">`
+            //   el.innerHTML="<img src=\"http://placehold.it/350x350\" width=\"400px\" height=\"150px\">";
             //     <img src="data.current.condition.icon">
             //     <p> ${temperature}°C</p>
             //     <p> ${condition}</p>
